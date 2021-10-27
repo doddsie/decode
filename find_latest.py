@@ -9,6 +9,7 @@ def find_latest(start_dir):
               modified_time = os.path.getmtime(os.path.join(root, name))
               if (modified_time > latest_time):
                   latest_file = os.path.join(root, name)
+                  latest_time = modified_time
       return os.path.abspath(latest_file)
 
       
